@@ -1,0 +1,21 @@
+Connect the JTAG cable
+----------------------
+
+Looking from board edge: red, yellow, purple, white, green
+
+If iMPACT can't see cable, make sure the parallel port is enabled in the BIOS (e.g. mode 278). Then, play around with addresses and drivers. Usually, something will work. Good luck!
+
+
+To actually program the flash
+-----------------------------
+
+Open iMPACT
+Configure devices using Boundary-Scan (JTAG): Automatically...
+Bypass bit file
+Device Programming Properties -> just click OK
+Right-click chip, Add SPI/BPI Flash
+Select pdq.mcs
+SPI PROM, AT45DB161D
+Right-click flash -> Program
+Device Programming Properties -> just click OK
+Will count up to 23%, stop & blue LED on board goes off, then say "Program Succeeded" and the blue LED relights
